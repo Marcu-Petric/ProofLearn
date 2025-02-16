@@ -66,24 +66,24 @@ The model is defined as a Discrete-Time Markov Chain (DTMC) with state space $S$
 $s = ($  
 $\quad auth,$  
 $\quad enrolled,$  
-$\quad course\text{-}created,$  
-$\quad has\text{-}sections,$  
-$\quad current\text{-}section,$  
-$\quad correct\text{-}answers,$  
-$\quad final\text{-}points,$  
-$\quad answers\text{-}submitted,$  
-$\quad final\text{-}exam\text{-}in\text{-}progress,$  
-$\quad progress\text{-}saved,$  
-$\quad previous\text{-}section$  
+$\quad course \textunderscore created,$  
+$\quad has \textunderscore sections,$  
+$\quad current \textunderscore section,$  
+$\quad correct \textunderscore answers,$  
+$\quad final \textunderscore points,$  
+$\quad answers \textunderscore submitted,$  
+$\quad final \textunderscore exam \textunderscore in \textunderscore progress,$  
+$\quad progress \textunderscore saved,$  
+$\quad previous \textunderscore section$  
 $)$
 
 Where:
-- $auth, enrolled, course\text{-}created, has\text{-}sections \in \{0,1\}$
-- $current\text{-}section \in \{0,...,4\}$
-- $correct\text{-}answers \in \{0,1,2\}$
-- $final\text{-}points \in \{0,...,10\}$
-- $answers\text{-}submitted, final\text{-}exam\text{-}in\text{-}progress, progress\text{-}saved \in \{0,1\}$
-- $previous\text{-}section \in \{0,...,3\}$
+- $auth, enrolled, course\textunderscore created, has\textunderscore sections \in \{0,1\}$
+- $current\textunderscore section \in \{0,...,4\}$
+- $correct\textunderscore answers \in \{0,1,2\}$
+- $final\textunderscore points \in \{0,...,10\}$
+- $answers\textunderscore submitted, final\textunderscore exam\textunderscore in\textunderscore progress, progress\textunderscore saved \in \{0,1\}$
+- $previous\textunderscore section \in \{0,...,3\}$
 
 <div align="center">
   <img src="fig/states.png" alt="Deployment Diagram"/>
