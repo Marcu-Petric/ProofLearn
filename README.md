@@ -63,15 +63,27 @@ We made sure students can't cheat by:
 
 The model is defined as a Discrete-Time Markov Chain (DTMC) with state space $S$ where each state $s \in S$ is a tuple:
 
-$s = (auth, enrolled, course\_created, has\_sections, current\_section, correct\_answers, final\_points, answers\_submitted, final\_exam\_in\_progress, progress\_saved, previous\_section)$
+$s = ($  
+$\quad auth,$  
+$\quad enrolled,$  
+$\quad course\text{-}created,$  
+$\quad has\text{-}sections,$  
+$\quad current\text{-}section,$  
+$\quad correct\text{-}answers,$  
+$\quad final\text{-}points,$  
+$\quad answers\text{-}submitted,$  
+$\quad final\text{-}exam\text{-}in\text{-}progress,$  
+$\quad progress\text{-}saved,$  
+$\quad previous\text{-}section$  
+$)$
 
 Where:
-- $auth, enrolled, course\_created, has\_sections \in \{0,1\}$
-- $current\_section \in \{0,...,4\}$
-- $correct\_answers \in \{0,1,2\}$
-- $final\_points \in \{0,...,10\}$
-- $answers\_submitted, final\_exam\_in\_progress, progress\_saved \in \{0,1\}$
-- $previous\_section \in \{0,...,3\}$
+- $auth, enrolled, course\text{-}created, has\text{-}sections \in \{0,1\}$
+- $current\text{-}section \in \{0,...,4\}$
+- $correct\text{-}answers \in \{0,1,2\}$
+- $final\text{-}points \in \{0,...,10\}$
+- $answers\text{-}submitted, final\text{-}exam\text{-}in\text{-}progress, progress\text{-}saved \in \{0,1\}$
+- $previous\text{-}section \in \{0,...,3\}$
 
 <div align="center">
   <img src="fig/states.png" alt="Deployment Diagram"/>
