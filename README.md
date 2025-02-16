@@ -96,25 +96,25 @@ Where:
 The system's properties are expressed in PCTL (Probabilistic Computation Tree Logic):
 
 #### Enrollment Properties
-- $P > 0 [ F (enrolled=1 \wedge previous\_section>0) ]$
+- $P > 0 [ F (enrolled=1 \wedge previous \textunderscore section>0) ]$
 - $P \leq 0 [ F (enrolled=1 \wedge auth=0) ]$
-- $P \leq 0 [ F (enrolled=0 \wedge current\_section>0) ]$
-- $P \leq 0 [ F (has\_sections=0 \wedge enrolled=1) ]$
+- $P \leq 0 [ F (enrolled=0 \wedge current \textunderscore section>0) ]$
+- $P \leq 0 [ F (has \textunderscore sections=0 \wedge enrolled=1) ]$
 
 #### Course Management
-- $P \leq 0 [ F (course\_created=1 \wedge auth=0) ]$
-- $P \leq 0 [ F (has\_sections=1 \wedge course\_created=0) ]$
+- $P \leq 0 [ F (course \textunderscore created=1 \wedge auth=0) ]$
+- $P \leq 0 [ F (has \textunderscore sections=1 \wedge course \textunderscore created=0) ]$
 
 #### Progress Properties
-- $P \leq 0 [ F (current\_section > previous\_section + 1) ]$
-- $P \leq 0 [ F (auth=0 \wedge (correct\_answers>0 \vee final\_exam\_in\_progress=1)) ]$
-- $P \leq 0 [ F (current\_section>0 \wedge current\_section<MAX\_SECTIONS \wedge correct\_answers<2 \wedge progress\_saved=1) ]$
+- $P \leq 0 [ F (current \textunderscore section > previous \textunderscore section + 1) ]$
+- $P \leq 0 [ F (auth=0 \wedge (correct \textunderscore answers>0 \vee final \textunderscore exam \textunderscore in \textunderscore progress=1)) ]$
+- $P \leq 0 [ F (current \textunderscore section>0 \wedge current \textunderscore section<MAX \textunderscore SECTIONS \wedge correct \textunderscore answers<2 \wedge progress \textunderscore saved=1) ]$
 
 #### Exam Properties
-- $P \leq 0 [ F (current\_section=FINAL\_SECTION \wedge final\_points<MIN\_POINTS\_TO\_PASS) ]$
-- $P \leq 0 [ F (current\_section<MAX\_SECTIONS \wedge final\_exam\_in\_progress=1) ]$
-- $P \leq 0 [ F (answers\_submitted=1 \wedge final\_exam\_in\_progress=0) ]$
-- $P \leq 0 [ F (final\_exam\_in\_progress=1 \wedge answers\_submitted=0 \wedge final\_points>0) ]$
+- $P \leq 0 [ F (current \textunderscore section=FINAL \textunderscore SECTION \wedge final \textunderscore points<MIN \textunderscore POINTS \textunderscore TO \textunderscore PASS) ]$
+- $P \leq 0 [ F (current \textunderscore section<MAX \textunderscore SECTIONS \wedge final \textunderscore exam \textunderscore in \textunderscore progress=1) ]$
+- $P \leq 0 [ F (answers \textunderscore submitted=1 \wedge final \textunderscore exam \textunderscore in \textunderscore progress=0) ]$
+- $P \leq 0 [ F (final \textunderscore exam \textunderscore in \textunderscore progress=1 \wedge answers \textunderscore submitted=0 \wedge final \textunderscore points>0) ]$
 
 ### Results
 
