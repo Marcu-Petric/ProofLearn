@@ -1,0 +1,41 @@
+{% extends "learning/base.html" %} {% block content %}
+<div>
+  <h1>{{ course.name }}</h1>
+  <p>{{ course.description }}</p>
+
+  <h2>Course Sections</h2>
+  <div>
+    {% for section in sections %}
+    <div>
+      <h3>{{ section.name }}</h3>
+    </div>
+    {% endfor %}
+  </div>
+
+  <a href="{% url 'courses:create_section' course.id %}">
+    <button>Add Section</button>
+  </a>
+  <a href="{% url 'courses:create_final' course.id %}">
+    <button>Add Final</button>
+  </a>
+
+  {% comment %} FINAL VERSION {% if user.is_authenticated %} {% if user ==
+  course.owner %}
+  <!-- Assuming 'owner' is the field in Course model -->
+  <a href="{% url 'courses:create_section' course.id %}">
+    <button>Add Section</button>
+  </a>
+  <a href="{% url 'courses:create_final' course.id %}">
+    <button>Add Final</button>
+  </a>
+  {% else %} {% if course in user.enrolled_courses.all %}
+  <!-- Assuming 'enrolled_courses' is a related name for the user's courses -->
+  <!-- User is enrolled, do not show button -->
+  {% else %}
+  <a href="{% url 'courses:enroll' course.id %}">
+    <!-- Assuming you have an enroll URL -->
+    <button>Enroll</button>
+  </a>
+  {% endif %} {% endif %} {% endif %} {% endcomment %}
+</div>
+{% endblock content %}

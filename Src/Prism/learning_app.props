@@ -1,0 +1,38 @@
+// In the Properties panel of PRISM GUI:
+
+// 1. Cannot enroll twice
+P>0 [ F "enrolled_twice" ]
+
+// 2. Only authenticated users can enroll
+P<=0 [ F "unauthenticated_enrolled" ]
+
+// 3. Cannot access content without enrollment
+P<=0 [ F "unauthorized_access" ]
+
+// 4. Cannot skip sections
+P<=0 [ F "section_skipped" ]
+
+// 5. Cannot pass without required points
+P<=0 [ F "invalid_pass" ]
+
+// 7. Cannot attempt final before completing sections
+P<=0 [ F "early_final" ]
+
+// 8. Progress is lost when logged out
+P<=0 [ F "progress_while_logged_out" ]
+
+// 9. Cannot modify submitted answers
+P<=0 [ F "answer_modified" ]
+
+
+// 11. Cannot see results before submission
+P<=0 [ F "early_results" ]
+
+// 12. Cannot enroll in empty course
+P<=0 [ F "empty_course_enrolled" ]
+
+// 13. Must be logged in to create course
+P<=0 [ F "teacher_creating_course" ]
+
+// 14. Cannot add sections before creating course
+P<=0 [ F "adding_section_before_course" ]
