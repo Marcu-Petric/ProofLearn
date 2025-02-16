@@ -10,14 +10,14 @@ This document presents a comprehensive analysis of a Learning Management System 
 
 ### Use Case Diagram
 <div align="center">
-  <img src="usecase.jpg" alt="Use Case Diagram"/>
+  <img src="fig/usecase.jpg" alt="Use Case Diagram"/>
   <br>
   <em>Figure 1: Use Case Diagram</em>
 </div>
 
 ### Class Diagram
 <div align="center">
-  <img src="class.png" alt="Class Diagram"/>
+  <img src="fig/class.png" alt="Class Diagram"/>
   <br>
   <em>Figure 2: Class Diagram</em>
 </div>
@@ -30,7 +30,7 @@ Before diving into our deployment setup, let's understand what a production envi
 - **Gunicorn:** A Python WSGI HTTP Server for UNIX, designed to serve Django applications in production environments. It manages multiple worker processes to handle concurrent requests efficiently.
 
 <div align="center">
-  <img src="deploy.png" alt="Deployment Diagram"/>
+  <img src="fig/deploy.png" alt="Deployment Diagram"/>
   <br>
   <em>Figure 3: Deployment Diagram</em>
 </div>
@@ -74,7 +74,7 @@ Where:
 - $previous\_section \in \{0,...,3\}$
 
 <div align="center">
-  <img src="states.png" alt="Deployment Diagram"/>
+  <img src="fig/states.png" alt="Deployment Diagram"/>
   <br>
   <em>Figure 4: State Diagram</em>
 </div>
@@ -114,7 +114,7 @@ The PRISM model checker verified all specified properties successfully, as shown
 - Course management rules are followed (proper creation sequence, section requirements)
 
 <div align="center">
-  <img src="prism_results.png" alt="PRISM Model Checking Results"/>
+  <img src="fig/prism_results.png" alt="PRISM Model Checking Results"/>
   <br>
   <em>Figure 5: PRISM Model Checking Results</em>
 </div>
@@ -124,7 +124,7 @@ The PRISM model checker verified all specified properties successfully, as shown
 Django follows a modular design pattern where each functionality is organized into "apps". Each app serves as a distinct component of the project, handling specific functionalities of the system. The framework implements the Model-View-Template (MVT) architectural pattern, which is a variation of MVC (Model-View-Controller). In this pattern, Models define the database structure, Views handle the business logic, and Templates manage the presentation layer. This separation of concerns allows for better code organization, reusability, and maintenance. Our Learning Management System leverages this architecture to create a scalable and maintainable educational platform.
 
 <div align="center">
-  <img src="django.png" alt="Django MVT Architecture"/>
+  <img src="fig/django.png" alt="Django MVT Architecture"/>
   <br>
   <em>Figure 6: Django MVT Architecture</em>
 </div>
